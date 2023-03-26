@@ -13,3 +13,8 @@ reservation
 
 TODO Chris:
 login page
+sign up page
+admin page
+contact us page
+faq page
+coupons page
