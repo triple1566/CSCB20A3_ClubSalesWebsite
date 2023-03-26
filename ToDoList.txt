@@ -15,3 +15,7 @@ Updated using vscode commit
 
 TODO Chris:
 login page
+sign up page
+admin page
+coupons/sales pages
+contact us/faq page
