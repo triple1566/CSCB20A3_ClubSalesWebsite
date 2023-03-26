@@ -1,1 +1,7 @@
-This is our ToDo List
+Task Manager for [project name]
+--------------------------------
+TODO Leo:
+
+
+
+TODO Chris:
