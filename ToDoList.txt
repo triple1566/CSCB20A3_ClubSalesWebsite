@@ -11,3 +11,9 @@ credits
 
 
 TODO Chris:
+login/sign up page (connected w/ admin)
+contact us/faq page (in footer)
+coupons/sales page
+admin page (control over small portion)
+reservation page
+restaurant in-person page
