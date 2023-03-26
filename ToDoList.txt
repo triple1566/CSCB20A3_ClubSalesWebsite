@@ -7,7 +7,13 @@ add to my cart
 menu
 photo showcase
 credits
+reservation
 
 
 
 TODO Chris:
+connected with login/ also connect with admin 
+contact us/ faq page (in footer)
+coupons/sales 
+admin
+login section
