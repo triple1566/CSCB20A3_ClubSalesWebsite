@@ -1,15 +1,15 @@
 from flask import Flask
 from flask import render_template
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='')
 
-@app.route("/")
+@app.route("/home")
 def home():
-  return render_template("home.html")
+  return render_template('home.html')
 
-@app.route("/")
+@app.route("/login")
 def login():
-  return render_template("login.html")
+  return render_template('login.html')
 
 if __name__ == "__main__":
   app.run()
