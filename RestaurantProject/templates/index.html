@@ -5,6 +5,7 @@
     <title>CNL Foods</title>
     <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -23,8 +24,13 @@
                 <li><a class="active" href="index.html">Home</a></li>
                 <li><a href="About.html">About Us</a></li>
                 <li><a href="Menu.html">Menu</a></li>
-                <li><a href="Contact.html">Contact</a></li>
                 <li><a href="Login.html">Login</a></li>
+                <li>
+                <button class="cart">
+                    <span>Add to Cart</span>
+                    <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                </button>
+                </li>
             </ul>
 
         </div>
@@ -51,6 +57,7 @@
     <div id="background-footer">
 
         <div class="footer">
+            <a href="Contact.html">Contact Us</a>
             <p>Created by: Chris Yan and Leo Jeong</p>
             <p>&copy; 2023 CNL Foods. All Rights Reserved.</p>
         </div>
