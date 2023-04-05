@@ -10,6 +10,7 @@ body {
     position: relative;
     min-height: 100%;
 }
+/*General background*/
 #background-header {
     width: 100%;
     height: 139px;
@@ -18,6 +19,7 @@ body {
     z-index: -1;
     position: fixed;
 }
+/*General container*/
 #container {
     width: 950px;
     height: auto;
@@ -116,48 +118,7 @@ p.slogan {
     width: 950px;
     height: 631px;
 }
-#about {
-    width: 950px;
-    height: auto;
-    padding-top: 54px;
-    position: relative;
-}
-#images-gallery {
-    border: 1px solid #8d215c;
-    float: left;
-    width: 590px;
-    height: 364px;
-    margin-left: 21px;
-    margin-right: 13px;
-    margin-bottom: 13px;
-    position: relative;
-}
-#gallery1 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    opacity: 1;
-}
-#gallery2 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    opacity: 0;
-}
-#previous {
-    float: left;
-    position: relative;
-    top: 148px;
-    opacity: 0.62;
-    z-index: 1;
-}
-#nextt {
-    float: right;
-    position: relative;
-    top: 148px;
-    opacity: 0.62;
-    z-index: 1;
-}
+
 .text {
     margin-top: 0px;
     font-family: Georgia, serif;
@@ -168,15 +129,8 @@ p.slogan {
     padding-right: 34px;
     position: relative;
 }
-span {
-    font-style: italic;
-}
-table {
-    margin-left: 34px;
-    margin-right: 34px;
-    margin-top: 54px;
-    border-spacing: 0px;
-}
+
+
 tr:nth-child(even) {
     background-color: #FE7847;
     color: #6c0a00;
@@ -280,16 +234,7 @@ form input[type=submit] {
     color: #3C2B22;
     opacity: 0.85;
 }
-#phone {
-    float: left;
-    width: 178px;
-    height: 111px;
-    font-size: 14px;
-    font-style: italic;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #3C2B22;
-    opacity: 0.85;
-}
+
 #email {
     float: left;
     width: 178px;
@@ -300,21 +245,7 @@ form input[type=submit] {
     color: #3C2B22;
     opacity: 0.85;
 }
-#map-container {
-    overflow: hidden;
-    clear: both;
-    margin-top: 190px;
-    margin-left: 36px;
-    position: relative;
-    width: 480px;
-    height: 300px;
-    border: 1px ridge #A88C6A;
-}
-#map {
-    width: 480px;
-    height: 300px;
-    opacity: 0.85;
-}
+
 #message {
     width: 100%;
     height: 100%;
