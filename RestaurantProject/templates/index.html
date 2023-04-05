@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}">
 </head>
 
 <body>
@@ -16,7 +17,7 @@
 
         <div id="header">
 
-            <img id="logo" src="{{url_for('static', filename='img/logo.png')}}" alt="Logo" />
+            <img id="logo" src="{{url_for('static', filename='img/logo_invert.png')}}" alt="Logo" />
 
             <p class="slogan">Get a taste of Korean food at UofT</p>
 
@@ -45,6 +46,8 @@
 
     </div>
 
+<!--Footer starts here-->>
+
     <div id="background-footer-hidden">
 
         <div class="footer">
@@ -55,11 +58,11 @@
     </div>
 
     <div id="background-footer">
-
         <div class="footer">
-            <a href="Contact.html">Contact Us</a>
-            <p>Created by: Chris Yan and Leo Jeong</p>
-            <p>&copy; 2023 CNL Foods. All Rights Reserved.</p>
+            <a href="Contact.html" class="footer-text">Contact Us</a>
+            <p class="footer-text">Created by: Chris Yan and Leo Jeong</p>
+            <p class="footer-text">&copy; 2023 CNL Foods. All Rights Reserved.</p>
+            <a href="https://goo.gl/maps/nLAZLsWLe7KaQxCdA" class="footer-text">1265 Military Trail, Scarborough, ON M1C 1A4</a>
         </div>
 
     </div>
