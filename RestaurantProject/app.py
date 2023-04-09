@@ -28,5 +28,13 @@ def contact():
 def mail():
     return render_template('Mail.html')
 
+@app.route('/Login.html')
+def login():
+    return render_template('Login.html')
+
+@app.route('/sign-up.html')
+def sign_up():
+    return render_template('sign-up.html')
+
 if __name__=='__main__':
     app.run(debug=True)
