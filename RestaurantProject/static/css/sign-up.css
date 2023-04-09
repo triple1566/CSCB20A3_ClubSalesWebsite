@@ -21,32 +21,7 @@ body {
     margin-top: 50px;
   }
   
-  #login-error-msg-holder {
-    width: 100%;
-    height: 100%;
-    display: grid;
-    justify-items: center;
-    align-items: center;
-  }
-  
-  #login-error-msg {
-    width: 23%;
-    text-align: center;
-    margin: 0;
-    padding: 5px;
-    font-size: 12px;
-    font-weight: bold;
-    color: #8a0000;
-    border: 1px solid #8a0000;
-    background-color: #e58f8f;
-    opacity: 0;
-  }
-  
-  #error-msg-second-line {
-    display: block;
-  }
-  
-  #login-form {
+  #signup-form {
     align-self: flex-start;
     display: grid;
     justify-items: center;
@@ -54,11 +29,11 @@ body {
     text-align: center;
   }
   
-  .login-form-field::placeholder {
+  .signup-form-field::placeholder {
     color: #3a3a3a;
   }
   
-  .login-form-field {
+  .signup-form-field {
     border: none;
     border-bottom: 1px solid #3a3a3a;
     margin-bottom: 10px;
@@ -67,7 +42,7 @@ body {
     padding: 0px 0px 5px 5px;
   }
   
-  #login-form-submit {
+  #signup-form-submit {
     width: 100%;
     padding: 7px;
     border: none;
@@ -81,7 +56,7 @@ body {
     margin: auto;
     margin-bottom: 5px;
   }
-  #login-form-sign-up {
+  #signup-form-sign-up {
     width: 30%;
     padding: 5px;
     border: none;
@@ -94,4 +69,17 @@ body {
     position: relative;
     margin: auto;
     margin-bottom: 5px;
+  }
+
+  #signup-form-button {
+    color: green;
+    padding: auto;
+    position: relative;
+    margin: auto;
+    margin-bottom: 5px;
+    background-color: azure;
+    border-radius: 10px;
+    width: 100px;
+    height: 30px;
+    font-weight: bold;
   }

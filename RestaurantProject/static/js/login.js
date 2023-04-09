@@ -17,7 +17,22 @@ loginButton.addEventListener("click", (e) => {
     }
 })
 
-const signupButton = document.getElementById("login-form-sign-up");
 function signupWindow() {
     window.location.href="sign-up.html";
+}
+
+
+
+function signedInButton () {
+    /*const signupForm = document.getElementById("singup-form");
+    const new_user = signupForm.new_user.value;
+    const new_pass = signupForm.new_pass.value;
+    if (new_user === "user" && password === "web_dev") {
+        alert("This account already exists. Try logging in.");
+    }
+    else {
+        alert("Welcome" + new_user + "! You are now officially a customer of UTSC KEats ")
+    }*/
+    alert("Welcome!");
+    window.location.href="index.html";
 }

@@ -43,12 +43,12 @@
     <main id="main-holder">
       <h1 id="login-header">Sign Up</h1>
       
-      <form id="login-form">
-        <input type="text" name="email" id="email-field" class="login-form-field" placeholder="Enter Email">
-        <input type="text" name="username" id="username-field" class="login-form-field" placeholder="New Username">
-        <input type="password" name="password" id="password-field" class="login-form-field" placeholder="New Password">
-        <input type="password" name="password" id="password-field" class="login-form-field" placeholder="Confirm New Password">
-        <input type="submit" value="Sign Up" id="signup-form-submit">
+      <form id="signup-form">
+        <input type="text" name="email" id="email-field" class="signup-form-field" placeholder="Enter Email">
+        <input type="text" name="new_user" id="new_username-field" class="signup-form-field" placeholder="New Username">
+        <input type="password" name="new_pass" id="new_password-field" class="signup-form-field" placeholder="New Password">
+        <input type="password" name="new_pass" id="confirm-password-field" class="signup-form-field" placeholder="Confirm New Password">
+        <input type="button" value="Sign Up" id="signup-form-button" onClick="signedInButton()"/>
       </form>
     
     </main>
@@ -78,7 +78,9 @@
 
     </div>
 
-    <script src="login.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="{{url_for('static', filename='js/login.js')}}" type="text/javascript"></script>
 
   </body>
 

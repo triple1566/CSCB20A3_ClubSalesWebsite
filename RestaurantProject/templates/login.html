@@ -51,7 +51,7 @@
         <input type="text" name="username" id="username-field" class="login-form-field" placeholder="Username">
         <input type="password" name="password" id="password-field" class="login-form-field" placeholder="Password">
         <input type="submit" value="Login" id="login-form-submit">
-        <input type="submit" value="Sign up" id="login-form-sign-up">
+        <input type="button" value="Sign up" id="login-form-sign-up" onClick="signupWindow()"/>
       </form>
     
     </main>
@@ -82,7 +82,7 @@
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-        <script src="{{url_for('static', filename='js/login.js')}}" type="text/javascript"></script>
+    <script src="{{url_for('static', filename='js/login.js')}}" type="text/javascript"></script>
 
   </body>
 
