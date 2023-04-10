@@ -36,5 +36,9 @@ def login():
 def sign_up():
     return render_template('sign-up.html')
 
+@app.route('/KSRB.html')
+def menu_item_KSRB():
+    return render.template('KSRB.html')
+
 if __name__=='__main__':
     app.run(debug=True)

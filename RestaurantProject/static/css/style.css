@@ -52,10 +52,12 @@ body {
 }
 p.slogan {
     float: right;
-    font-size: 22px;
-    font-style: bold;
+    font-size: 30px;
+    font-kerning: 40px;
+    font-weight: bold;
+    font-stretch: expanded;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: #fb0738;
+    color: #f3feff;
     
 }
 #ul-header {
@@ -64,14 +66,14 @@ p.slogan {
     clear: right;
     float: right;
     padding: 0px 0px 0px 0px;
-    background-color: #6c314d;
-    border-color: #732822;
-    border-style: ridge;
+    background-color: #650014;
+    border-radius: 15px;;
+    border-color: #650014;
     opacity: 1;
 }
 #ul-header li {
     float: left;
-    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: bold;
     font-size: 30px;
 }
@@ -80,9 +82,9 @@ p.slogan {
     list-style-position: inside;
     display: block;
     text-align: center;
-    padding-right: 12px;
-    padding-left: 12px;
-    color: #5998c2;
+    padding-right: 20px;
+    padding-left: 20px;
+    color: #ffffff;
 }
 #ul-header li:nth-child(1) {
     border-right: 1px solid #2d2d2d;
@@ -114,7 +116,7 @@ p.slogan {
     padding-right: 12px;
     padding-left: 12px;
     color: #5f324a;
-    background-color: #edbcd6;
+    background-color: #b12900; 
 }
 #background-restaurant {
     width: 950px;
@@ -313,8 +315,8 @@ button{
     justify-content: center;
 }
 .cart{
-    background: #2de1fd;
-    border-radius: 10px;
+    background: #ffdd00;
+    border-radius: 5px;
     color: black;
     font-size: 12px;
     font-weight: bolder;
@@ -322,13 +324,13 @@ button{
 }
 .cart i{
     position: absolute;
-    margin-left: 90px;
+    margin-left: 45px;
     column-fill: transparent;
-    transition: 400ms;
+    transition: 200ms;
     color: transparent;
 }
 .cart span{
-    transition: 400ms;
+    transition: 200ms;
 }
 .cart:hover span{
     margin-right: 30px;
