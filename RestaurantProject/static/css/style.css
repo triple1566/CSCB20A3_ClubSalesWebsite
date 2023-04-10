@@ -6,7 +6,7 @@ html {
     height: 100%;
 }
 body {
-    background-color: darkcyan;
+    background-color: #d9002b;
     position: relative;
     min-height: 100%;
 }
@@ -14,8 +14,8 @@ body {
 #background-header {
     width: 100%;
     height: 139px;
-    background-color: #C7A3C2;
-    border-bottom: 1px solid #C7A3C2;
+    background-color: #2d2d2d;
+    border-bottom: 1px solid #2d2d2d;
     z-index: -1;
     position: fixed;
 }
@@ -31,8 +31,8 @@ body {
 #header {
     width: 950px;
     height: 139px;
-    background-color: #C7A3C2;
-    border-bottom: 1px solid #C7A3C2;
+    background-color: #2d2d2d;
+    border-bottom: 1px solid #2d2d2d;
     left: 50%;
     margin-left: -475px;
     position: fixed;
@@ -53,9 +53,9 @@ body {
 p.slogan {
     float: right;
     font-size: 22px;
-    font-style: italic;
+    font-style: bold;
     font-family: "Trebuchet MS", Helvetica, sans-serif;
-    color: #42192d;
+    color: #fb0738;
     
 }
 #ul-header {
@@ -85,25 +85,25 @@ p.slogan {
     color: #5998c2;
 }
 #ul-header li:nth-child(1) {
-    border-right: 1px solid #8A6578;
+    border-right: 1px solid #2d2d2d;
 }
 #ul-header li:nth-child(2) {
-    border-right: 1px solid #8A6578;
+    border-right: 1px solid #2d2d2d;
 }
 #ul-header li:nth-child(3) {
-    border-right: 1px solid #8A6578;
+    border-right: 1px solid #2d2d2d;
 }
 #ul-header li:nth-child(4) {
-    border-right: 1px solid #8A6578;
+    border-right: 1px solid #2d2d2d;
 }
 #ul-header li:nth-child(5) {
-    border-right: 1px solid #8A6578;
+    border-right: 1px solid #2d2d2d;
 }
 #ul-header li:nth-child(6) {
-    border-right: 1px solid #8A6578;
+    border-right: 1px solid #2d2d2d;
 }
 #ul-header li a:hover {
-    background-color: #4da3d2;
+    background-color: #d9002b;
     color: white;
 }
 .active {
@@ -113,7 +113,7 @@ p.slogan {
     text-align: center;
     padding-right: 12px;
     padding-left: 12px;
-    color: #CBAABC;
+    color: #5f324a;
     background-color: #edbcd6;
 }
 #background-restaurant {
