@@ -35,10 +35,15 @@ def login():
 @app.route('/sign-up.html')
 def sign_up():
     return render_template('sign-up.html')
-
+#!================<Menu Items>======================={
 @app.route('/KSRB.html')
 def menu_item_KSRB():
-    return render.template('KSRB.html')
+    return render_template('Menu_Items/KSRB.html')
+@app.route('/TMRB.html')
+def menu_item_TMRB():
+    return render_template('Menu_Items/TMRB.html')
+
+#!===================================================}
 
 if __name__=='__main__':
     app.run(debug=True)
