@@ -1,8 +1,18 @@
-from flask import Flask,render_template,request,redirect
+from flask import Flask,render_template,request,redirect,session,flash,jsonify
 import smtplib
 import sqlite3
 
 app=Flask(__name__)
+
+def db_query(query, args=(), one=False):
+    conn = sqlite3.connect('database.db')
+    cur = conn.cursor()
+    cur.execute(query, args)
+    rv = cur.fetchall()
+    conn.commit()
+    cur.close()
+    return (rv[0] if rv else None) if one else rv
+db_query('CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY AUTOINCREMENT, email TEXT UNIQUE, username TEXT UNIQUE, password TEXT)')
 
 #route() decorators
 @app.route('/')
@@ -29,26 +39,56 @@ def contact():
 def mail():
     return render_template('Mail.html')
 
-@app.route('/Login.html')
-def login():
+@app.route('/Login.html', methods=['GET'])
+def login_page():
     return render_template('Login.html')
 
-'''@app.route('/sign-up.html', methods=['GET','POST'])
-def sign_up():
+@app.route('/check-login', methods=['POST'])
+def check_login():
+
+    data = request.json
+    username = data.get('username')
+    password = data.get('password')
+
+    conn = sqlite3.connect('database.db')
+    c = conn.cursor()
+
+    query = "SELECT * FROM users WHERE username = ? AND password = ?"
+    c.execute(query, (username, password))
+    user = c.fetchone()
+
+    if user:
+        session['user_id'] = user[0]
+        return jsonify({'success': True})
+    else:
+        return jsonify({'success': False})
+
+
+@app.route('/sign-up.html', methods=['GET','POST'])
+def signup():
     if request.method == 'POST':
-        username = request.form['username']
+        # Get the form data from the request object
         email = request.form['email']
+        username = request.form['username']
         password = request.form['password']
-        
-        con = sqlite3.connect('sign-up.db')
-        cur = con.cursor()
-        
-        cur.execute("INSERT INTO users (username, email, password) VALUES (?, ?, ?)", (username, email, password))
-        con.commit()
-        
-        con.close()
-        return "User Created Successfully!"
-    return render_template('sign-up.html')'''
+
+        # Connect to the database
+        conn = sqlite3.connect('database.db')
+        c = conn.cursor()
+
+        # Insert the form data into the database
+        c.execute('INSERT INTO users (email, username, password) VALUES (?, ?, ?)', (email, username, password))
+        conn.commit()
+
+        # Close the database connection
+        conn.close()
+
+        # Return a success message to the client
+        return 'Signup successful!'
+
+    # If the request method is not POST, render the signup page
+    return render_template('sign-up.html')
+
 
 
 
