@@ -67,26 +67,20 @@ def check_login():
 @app.route('/sign-up.html', methods=['GET','POST'])
 def signup():
     if request.method == 'POST':
-        # Get the form data from the request object
         email = request.form['email']
         username = request.form['username']
         password = request.form['password']
 
-        # Connect to the database
         conn = sqlite3.connect('database.db')
         c = conn.cursor()
 
-        # Insert the form data into the database
         c.execute('INSERT INTO users (email, username, password) VALUES (?, ?, ?)', (email, username, password))
         conn.commit()
 
-        # Close the database connection
         conn.close()
 
-        # Return a success message to the client
         return 'Signup successful!'
 
-    # If the request method is not POST, render the signup page
     return render_template('sign-up.html')
 
 
