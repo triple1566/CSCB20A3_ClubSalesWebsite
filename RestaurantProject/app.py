@@ -62,5 +62,10 @@ def menu_item_Side_EDM():
 
 #!===================================================
 
+#My Cart Page
+@app.route('/MyCart.html')
+def MyCart():
+    return render_template('MyCart.html')
+
 if __name__=='__main__':
     app.run(debug=True)
