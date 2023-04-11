@@ -17,7 +17,7 @@
 
         <div id="header" style="position:absolute;">
 
-            <img id="logo" src="{{url_for('static', filename='img/logo.png')}}" alt="Logo" />
+            <a href="index.html"><img id="logo" src="{{url_for('static', filename='img/logo.png')}}" alt="Logo" /></a>
 
             <p class="slogan">Get a taste of Korean food at UofT</p>
 
@@ -42,6 +42,35 @@
 
 
             <!-- This is where we create the menu for the food items -->
+
+            <!--Copy paste the complete drop down menu onto html page of each menu item-->
+            <div class="navbar">
+                <div class="dropdown">
+                  <button class="dropbtn">Set 1 
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-content">
+                    <a href="KSRB.html">Kimchi Spam Rice Ball</a>
+                    <a href="TMRB.html">Tuna Mayo Rice Ball</a>
+                    <a href="BEV.html">Beverages</a>
+                  </div>
+                </div> 
+                <div class="dropdown">
+                    <button class="dropbtn">Set 2 
+                      <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                      <a href="#">Link 1</a>
+                      <a href="#">Link 2</a>
+                      <a href="#">Link 3</a>
+                    </div>
+                  </div> 
+              </div>
+
+
+
+              <img id="menu_img" src="{{url_for('static', filename='img/InternProjMenuFinal.png')}}" alt="Menu"/>
+
 
 
         </div>

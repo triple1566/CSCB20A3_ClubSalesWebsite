@@ -6,8 +6,6 @@
     <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
     <link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}">
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_LagaHj7Jqhui85MHrb5p5KhwOT4hhZg&callback=initMap"></script>
-    <script src="{{url_for('static', filename='js/myScript.js')}}" type="text/javascript"></script>
     <meta charset="UTF-8">
 </head>
 
@@ -26,7 +24,7 @@
             <ul id="ul-header">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="About.html">About Us</a></li>
-                <li><a href="Menu.html">Menu</a></li>
+                <li><a class="active" href="Menu.html">Menu</a></li>
                 <li><a href="Login.html">Login</a></li>
                 <li>
                     <button class="cart">
@@ -40,29 +38,40 @@
 
         <div id="empty"></div>
 
-        <div id="contact">
-            <div id="contact-form">
-                <form action="/send_email/" method="post" target="_self">
-                    Name:
-                    <br>
-                    <input type="text" name="name"></input>
-                    <br> Email:
-                    <br>
-                    <input type="text" name="email"></input>
-                    <br> Subject:
-                    <br>
-                    <input type="text" name="subject"></input>
-                    <br> Your message:
-                    <br>
-                    <textarea name="message"></textarea>
-                    <br>
-                    <input type="submit" name="submit" value="Submit">
-                </form>
-            </div>
+        <div>
 
+
+            <!-- This is where we create the menu for the food items -->
+            <div class="navbar">
+                <div class="dropdown">
+                  <button class="dropbtn">Set 1 
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                  </div>
+                </div> 
+                <div class="dropdown">
+                    <button class="dropbtn">Set 2 
+                      <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                      <a href="#">Link 1</a>
+                      <a href="#">Link 2</a>
+                      <a href="#">Link 3</a>
+                    </div>
+                  </div> 
+              </div>
+
+
+            <h1>beverages</h1>
+              
 
 
         </div>
+
 
     </div>
 <!--Footer starts here-->

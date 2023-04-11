@@ -1,5 +1,5 @@
   body {
-    background-image: url("../img/Restaurant.jpeg");
+    background-image: url("../img/Restaurant.png");
     background-size: cover;
     background-repeat: no-repeat;
     font-family : Verdana,Tahoma, sans-serif;
@@ -95,3 +95,13 @@
     margin: auto;
     margin-bottom: 5px;
   }
+#background-footer{
+    background-color: #303030;
+}
+.footer{
+    border-width: 0px;
+}
+.footer-text{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #EDF2F4;
+}
