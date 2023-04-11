@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_LagaHj7Jqhui85MHrb5p5KhwOT4hhZg&callback=initMap"></script>
-    <script src="{{url_for('static', filename='js/myScript.js')}}" type="text/javascript"></script>
     <meta charset="UTF-8">
 </head>
 
@@ -42,7 +41,7 @@
 
         <div id="contact">
             <div id="contact-form">
-                <form action="https://www.linkedin.com/in/leoj1566/?trk=public-profile-join-page" method="POST">
+                <form id="contact-form" action="https://www.linkedin.com/in/leoj1566/" method="POST">
                     Name:
                     <br>
                     <input type="text" name="name"></input>
@@ -56,8 +55,13 @@
                     <br>
                     <textarea name="message"></textarea>
                     <br>
-                    <input type="submit" name="submit" value="Submit">
+                    <button type="submit">Submit</button>
                 </form>
+            </div>
+            <div id="beside-contact">
+                <h2>Thank you for contacting us!</h2>
+                <h3>We are grateful for any feedback you provide as we strive to make our food and service better every single day.</h3>
+                <a href="About.html"><img class="img_logo" src="/static/img/logo.png" alt="Logo"></a>
             </div>
         </div>
 
