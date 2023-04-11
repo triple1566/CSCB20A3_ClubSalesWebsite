@@ -4,6 +4,8 @@ import sqlite3
 
 app=Flask(__name__)
 
+app.secret_key = "some_secret_key"
+
 def db_query(query, args=(), one=False):
     conn = sqlite3.connect('database.db')
     cur = conn.cursor()
@@ -12,6 +14,7 @@ def db_query(query, args=(), one=False):
     conn.commit()
     cur.close()
     return (rv[0] if rv else None) if one else rv
+
 db_query('CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY AUTOINCREMENT, email TEXT UNIQUE, username TEXT UNIQUE, password TEXT)')
 
 #route() decorators
@@ -45,17 +48,11 @@ def login_page():
 
 @app.route('/check-login', methods=['POST'])
 def check_login():
-
     data = request.json
     username = data.get('username')
     password = data.get('password')
 
-    conn = sqlite3.connect('database.db')
-    c = conn.cursor()
-
-    query = "SELECT * FROM users WHERE username = ? AND password = ?"
-    c.execute(query, (username, password))
-    user = c.fetchone()
+    user = db_query("SELECT * FROM users WHERE username = ? AND password = ?", (username, password), one=True)
 
     if user:
         session['user_id'] = user[0]
@@ -67,26 +64,15 @@ def check_login():
 @app.route('/sign-up.html', methods=['GET','POST'])
 def signup():
     if request.method == 'POST':
-        # Get the form data from the request object
+        
         email = request.form['email']
         username = request.form['username']
         password = request.form['password']
 
-        # Connect to the database
-        conn = sqlite3.connect('database.db')
-        c = conn.cursor()
+        db_query('INSERT INTO users (email, username, password) VALUES (?, ?, ?)', (email, username, password))
 
-        # Insert the form data into the database
-        c.execute('INSERT INTO users (email, username, password) VALUES (?, ?, ?)', (email, username, password))
-        conn.commit()
-
-        # Close the database connection
-        conn.close()
-
-        # Return a success message to the client
         return 'Signup successful!'
 
-    # If the request method is not POST, render the signup page
     return render_template('sign-up.html')
 
 
