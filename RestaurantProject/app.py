@@ -1,5 +1,6 @@
 from flask import Flask,render_template,request,redirect
 import smtplib
+import sqlite3
 
 app=Flask(__name__)
 
@@ -32,9 +33,25 @@ def mail():
 def login():
     return render_template('Login.html')
 
-@app.route('/sign-up.html')
+@app.route('/sign-up.html', methods=['GET','POST'])
 def sign_up():
+    if request.method == 'POST':
+        username = request.form['username']
+        email = request.form['email']
+        password = request.form['password']
+        
+        con = sqlite3.connect('sign-up.db')
+        cur = con.cursor()
+        
+        cur.execute("INSERT INTO users (username, email, password) VALUES (?, ?, ?)", (username, email, password))
+        con.commit()
+        
+        con.close()
+        return "User Created Successfully!"
     return render_template('sign-up.html')
+
+
+
 #!================<Menu Items>=======================
 @app.route('/KSRB.html')
 def menu_item_KSRB():
