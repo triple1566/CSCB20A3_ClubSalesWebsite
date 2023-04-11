@@ -7,6 +7,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/MyCart.css')}}">
 </head>
 
 <body>
@@ -19,20 +20,9 @@
 
             <a href="index.html"><img id="logo" src="{{url_for('static', filename='img/logo.png')}}" alt="Logo" /></a>
 
-            <p class="slogan">Get a taste of Korean food at UofT</p>
+            <p class="slogan">Time To Check Out!</p>
 
-            <ul id="ul-header">
-                <li><a class="active" href="index.html">Home</a></li>
-                <li><a href="About.html">About Us</a></li>
-                <li><a href="Menu.html">Menu</a></li>
-                <li><a href="Login.html">Login</a></li>
-                <li>
-                <button class="cart">
-                    <span>My Cart</span>
-                    <i class="fa fa-shopping-basket" aria-hidden="true"></i>
-                </button>
-                </li>
-            </ul>
+            
 
         </div>
 
@@ -42,8 +32,11 @@
 
 
     <!-- Cart List -->
-
-    <h1>This is your cart</h1>
+    <div id="CartList">
+        <ol>
+            <li id="EmptyPlaceholder">No Items Yet!</li>
+        </ol>
+    </div>
 
 
 <!--Footer starts here-->
@@ -68,6 +61,7 @@
     </div>
 
     <script src="{{url_for('static', filename='js/index.js')}}" type="text/javascript"></script>
+    <script src="{{url_for('static', filename='js/MyCart.js')}}" type="text/javascript"></script>
 
 </body>
 
