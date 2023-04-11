@@ -47,6 +47,19 @@ def menu_item_TMRB():
 @app.route('/BEV.html')
 def menu_item_BEV():
     return render_template('Menu_Items/BEV.html')
+
+@app.route('/Side_Coleslaw.html')
+def menu_item_Side_CSL():
+    return render_template('Menu_Items/Side_Coleslaw.html')
+
+@app.route('/Side_Cornsalad.html')
+def menu_item_Side_CSD():
+    return render_template('Menu_Items/Side_Cornsalad.html')
+
+@app.route('/Side_Edamame.html')
+def menu_item_Side_EDM():
+    return render_template('Menu_Items/Side_Edamame.html')
+
 #!===================================================
 
 if __name__=='__main__':
