@@ -33,7 +33,7 @@ def mail():
 def login():
     return render_template('Login.html')
 
-@app.route('/sign-up.html', methods=['GET','POST'])
+'''@app.route('/sign-up.html', methods=['GET','POST'])
 def sign_up():
     if request.method == 'POST':
         username = request.form['username']
@@ -48,7 +48,7 @@ def sign_up():
         
         con.close()
         return "User Created Successfully!"
-    return render_template('sign-up.html')
+    return render_template('sign-up.html')'''
 
 
 
