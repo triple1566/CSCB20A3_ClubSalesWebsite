@@ -44,6 +44,9 @@ def menu_item_KSRB():
 def menu_item_TMRB():
     return render_template('Menu_Items/TMRB.html')
 
+@app.route('/BEV.html')
+def menu_item_BEV():
+    return render_template('Menu_Items/BEV.html')
 #!===================================================
 
 if __name__=='__main__':
