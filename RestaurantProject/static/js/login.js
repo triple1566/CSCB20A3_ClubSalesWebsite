@@ -34,5 +34,5 @@ function signedInButton () {
         alert("Welcome" + new_user + "! You are now officially a customer of UTSC KEats ")
     }*/
     alert("Welcome!");
-    window.location.href="index.html";
+    window.location.href="Login.html";
 }
