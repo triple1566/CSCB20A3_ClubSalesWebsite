@@ -1,4 +1,5 @@
 var slidePosition = 1;
+
 SlideShow(slidePosition);
 
 // forward/Back controls
@@ -26,3 +27,4 @@ function SlideShow(n) {
   slides[slidePosition-1].style.display = "block";
   circles[slidePosition-1].className += " enable";
 } 
+
