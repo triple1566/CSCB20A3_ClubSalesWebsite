@@ -29,3 +29,38 @@
   font-size: medium;
   background-color: #e0e0e0;
 }
+
+#back-to-menu-button {
+  position: absolute;
+  top: 68%;
+  left: 10%;
+  background-color: #000;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#back-to-menu-button:hover {
+  background-color: #fff;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.checkout-button {
+  position: absolute;
+  top: 68%;
+  right: 10%;
+  background-color: #000;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+#checkout-button:hover {
+  background-color: #fff;
+  color: #333;
+  transition: all 0.3s ease;
+}

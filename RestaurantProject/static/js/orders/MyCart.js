@@ -1,6 +1,7 @@
-const CartList = document.getElementsByClassName("CartList");
-const SubmitButton = document.getElementById("SubmitButton");
-const ItemName = document.getElementById("ItemName");
-const ItemPrice = document.getElementsByClassName("price");
+const urlParams = new URLSearchParams(window.location.search);
+const data = urlParams.get('data');
 
-SubmitButton.addEventListener("click",addItemToList());
+const cartItemsElement = document.getElementById('cart-items');
+const cartItemElement = document.createElement('li');
+cartItemElement.textContent = data;
+cartItemsElement.appendChild(cartItemElement);

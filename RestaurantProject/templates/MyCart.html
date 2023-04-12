@@ -37,11 +37,12 @@
         <h1>Your Cart:</h1>
 
         <div id="CartList">
-        <ol>
-            
-        </ol>
+            <ul id="cart-items"></ul>
         </div>
+
     </div>
+    <button id="back-to-menu-button" onclick="window.location.href='Menu.html'" class="fa fa-chevron-left">Menu</button>
+    <button class="checkout-button">Check Out</button>
 
 
 <!--Footer starts here-->
@@ -65,8 +66,7 @@
 
     </div>
 
-    <script src="{{url_for('static', filename='js/index.js')}}" type="text/javascript"></script>
-    <script src="{{url_for('static', filename='js/MyCart.js')}}" type="text/javascript"></script>
+    <script src="{{url_for('static', filename='js/orders/MyCart.js')}}" type="text/javascript"></script>
 
 </body>
 
