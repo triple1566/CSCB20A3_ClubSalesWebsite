@@ -18,6 +18,7 @@ function signedInButton() {
         if (xhr.status === 200) {
           alert(xhr.responseText);
           document.getElementById('signup-form').reset();
+          window.location.href = "/templates/Login.html";
         } else {
           alert('Error: ' + xhr.status);
         }
@@ -29,6 +30,5 @@ function signedInButton() {
     xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
   
     xhr.send('email=' + email + '&username=' + username + '&password=' + password);
-  
     return false;
   }
